@@ -1,0 +1,16 @@
+div#splash
+  div.row
+    div.span12
+      h1 akauntia
+        small ¿Quién entiende a los bancos?
+  div.row
+    div.span12
+      ul.media-grid
+        li
+          a
+            img(src="http://lorempixel.com/690/230/abstract")
+   div.row
+    div.span12
+      form(action="/", method="POST", enctype="multipart/form-data")
+        input.span10(type="file", name="movements")
+        input#upload.btn.primary(type="submit", value="Upload")
