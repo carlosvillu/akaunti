@@ -1,17 +1,20 @@
 {inspect} = require 'util'
 
-IngCrawler = require 'ingcrawler'
 express = require 'express'
-routes = require './routes'
+
 
 app = module.exports = express.createServer()
+
+#home = require './routes/upload'
+{api, home} = require './routes'
 
 # Configuration
 app.configure ->
   app.set 'views', "#{__dirname}/views"
   app.set 'view engine', 'jade'
-  console.log "#{__dirname}/uploads"
   app.use(express.bodyParser({uploadDir:"#{__dirname}/uploads", keepExtensions: true}))
+  app.use(express.cookieParser())
+  app.use(express.session({ secret: "nodejs" }))
   app.use(express.methodOverride())
   app.use(app.router)
   app.use(express.static("#{__dirname}/public"))
@@ -22,12 +25,9 @@ app.configure 'development', ->
 app.configure 'production', ->
   app.use(express.errorHandler())
 
-# Routes
-app.get '/', routes.index
+# Home page
+app.post '/', home.uploadFile
+app.get '/', home.form
 
-app.post '/', (req, res) ->
-  console.log inspect "#{inspect req.files.movements.path}"
-  crawler = new IngCrawler(req.files.movements.path)
-  crawler.on 'end', ( movements) ->
-    console.log JSON.stringify movements
-    res.redirect 'back'
+# API
+app.get '/api', api.root

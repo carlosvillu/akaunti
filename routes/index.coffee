@@ -1,2 +1,2 @@
-exports.index = (req, res) ->
-  res.render 'upload'
+exports.api = require './api'
+exports.home = require './upload'
