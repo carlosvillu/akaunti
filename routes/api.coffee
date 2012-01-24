@@ -1,3 +1,3 @@
-# GET /api 
-exports.root = (req, res) ->
-  res.send("API")
+# GET /api/movements 
+exports.allMovements = (req, res) ->
+  res.json req.session.movements

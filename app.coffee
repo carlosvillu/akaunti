@@ -6,7 +6,7 @@ express = require 'express'
 app = module.exports = express.createServer()
 
 #home = require './routes/upload'
-{api, home} = require './routes'
+{application, api, home} = require './routes'
 
 # Configuration
 app.configure ->
@@ -30,4 +30,7 @@ app.post '/', home.uploadFile
 app.get '/', home.form
 
 # API
-app.get '/api', api.root
+app.get '/api/movements', api.allMovements
+
+# Main application
+app.get '/application', application.showMain

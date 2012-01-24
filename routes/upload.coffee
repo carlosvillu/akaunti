@@ -10,4 +10,4 @@ exports.uploadFile = (req, res) ->
 
 # GET / Show upload form
 exports.form = (req, res) ->
-  if req.session.movements? then res.render('index') else res.render 'upload'
+  if req.session.movements? then res.redirect('/application') else res.render 'upload', {require: 'KO'}
