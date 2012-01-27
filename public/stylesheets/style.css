@@ -1,8 +1,47 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/*
+ * Developer
+ * */
+.show-grid [class*="span"] {
+  background: #EEE;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  min-height: 30px;
+  line-height: 30px;
 }
 
-a {
-  color: #00B7FF;
+/*
+ * Navigation Menu
+ * */
+div.topbar a { cursor: pointer; }
+
+
+/*
+ * Splash screen
+ * */
+div#splash {
+  width:726px;
+	height:316px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-158px 0 0 -363px;
 }
+
+#upload { position: relative; left: 54px; }
+
+/**
+ *  Main container
+ * */
+#main-container { margin-top: 40px; }
+/**
+ * Charts
+ * */
+#chart-container { position: absolute; top: 73px; left: 173.4px} 
+
+
+/**
+ * Table movements
+ * */
+#movements { margin-top: 20px; }

@@ -1,0 +1,21 @@
+div.topbar
+  div.topbar-inner
+    div.container
+      h3 
+        a Akaunti
+      ul.nav
+        li
+          a#income(href="#expenses-vs-income") Ingresos vs Gastos
+        li
+          a#categories(href="#categories") Gastos por categorías
+        li
+          a#new_categories(href="#newCategories") Nuevas categorías
+div#main-container
+  div.row
+    div.span7
+      ul.media-grid
+        li
+          div#chart-container
+            div#chart(style="width:390px;height:300px")
+    div.span9.offset7
+      div#movements

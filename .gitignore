@@ -1,1 +1,4 @@
+.DS_*
+npm-debug.log
+uploads/*
 node_modules/

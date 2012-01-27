@@ -1,6 +1,13 @@
 !!!
 html
   head
-    title= title
+    title Akaunti
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body!= body
+    script(src="javascripts/libs/jquery/jquery-min.js")
+    script(src="javascripts/libs/flot/jquery.flot.js")
+    script(src="javascripts/libs/flot/jquery.flot.pie.js")
+    if require == 'OK'
+      script(data-main="javascripts/main", src="javascripts/libs/require/require.js")
+  body
+    div.container!= body
