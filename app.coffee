@@ -31,6 +31,7 @@ app.get '/', home.form
 
 # API
 app.get '/api/movements', api.allMovements
+app.get '/api/categories', api.allCategories
 
 # Main application
 app.get '/application', application.showMain

@@ -1,4 +1,4 @@
-define(['views/movementsView', 'backbone'], function(MovementsView, BB){
+define(['views/movementsView', 'views/categories', 'backbone'], function(MovementsView, CategoriesView, BB){
   var Workspace = BB.Router.extend({
     routes: {
       'expenses-vs-income': 'main',
@@ -8,11 +8,12 @@ define(['views/movementsView', 'backbone'], function(MovementsView, BB){
 
     main: function(){
       console.log('#Main');
-      movementsView = new MovementsView({el: $('#chart')});
+      var movementsView = new MovementsView();
     },
 
     categories: function(){
       console.log('#categories');
+      var categoriesView = new CategoriesView();
     },
 
     newCategories: function(){
