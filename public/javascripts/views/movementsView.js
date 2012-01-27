@@ -8,8 +8,8 @@ define(['text!templates/movements.tpl', 'collections/movements', 'views/movement
     },
 
     render: function(){
+      $('#main-container').html(templateMovements);
       this.plot();
-      $('#movements').html(templateMovements);
       this.addAll();
       return this;
     },
@@ -25,7 +25,7 @@ define(['text!templates/movements.tpl', 'collections/movements', 'views/movement
     },
 
     plot: function(){
-      $.plot(this.el, [{label: 'gastos', data: this.collection.expenses_amount()}, {label: 'ingresos', data: this.collection.incomes_amount()}],
+      $.plot($('#chart'), [{label: 'gastos', data: this.collection.expenses_amount()}, {label: 'ingresos', data: this.collection.incomes_amount()}],
       {
         series: {
             pie: { 
