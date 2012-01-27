@@ -30,3 +30,18 @@ div#splash {
 }
 
 #upload { position: relative; left: 54px; }
+
+/**
+ *  Main container
+ * */
+#main-container { margin-top: 40px; }
+/**
+ * Charts
+ * */
+#chart-container { position: absolute; top: 73px; left: 173.4px} 
+
+
+/**
+ * Table movements
+ * */
+#movements { margin-top: 20px; }

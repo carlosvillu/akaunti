@@ -8,7 +8,7 @@ define(['views/movementsView', 'backbone'], function(MovementsView, BB){
 
     main: function(){
       console.log('#Main');
-      movementsView = new MovementsView();
+      movementsView = new MovementsView({el: $('#chart')});
     },
 
     categories: function(){
