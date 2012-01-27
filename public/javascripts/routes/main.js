@@ -14,7 +14,6 @@ define(['views/movementsView', 'views/categories', 'backbone'], function(Movemen
     categories: function(){
       console.log('#categories');
       var categoriesView = new CategoriesView();
-      categoriesView.render();
     },
 
     newCategories: function(){

@@ -15,6 +15,7 @@
         <tr>
           <th>amount</th>
           <th>description</th>
+          <th>category</th>
         </tr>
       </thead>
       <tbody id="movements-details">
